@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <math.h>
+#include <stdio.h>
+int isqr(int i){return i * i * i;} 
+int jsqr(int j){return j * j * j;} 
+int main(int argc, char *argv[]) { 
+int n, p = 0, i, j; 
+printf("Enter number: "); 
+scanf("%d", &n); 
+for(i = 0; isqr(i) <= n-1; ++i) 
+for(j = 0; jsqr(j) <= n-1; ++j) 
+if(isqr(i)+jsqr(j) == n) ++p; 
+printf("result: %d", p); 
+return 0; 
+}
